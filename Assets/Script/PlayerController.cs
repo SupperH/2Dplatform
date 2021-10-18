@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float runSpeed;
     //跳跃速度
     public float jumpSpeed;
+    //二段跳速度
+    public float doubleJumpSpeed;
 
     //获得角色刚体类以进行移动
     private Rigidbody2D rigidbody2D;
@@ -21,6 +23,8 @@ public class PlayerController : MonoBehaviour
     //动画组件
     private Animator animator;
 
+    //判断是否二段跳
+    private bool canDoubleJump;
     //游戏一开始就会执行的方法
     void Start()
     {
@@ -38,6 +42,7 @@ public class PlayerController : MonoBehaviour
         Jump();
         CheckGrounded();
         SwitchAnimation();
+        //Attack();
 
     }
 
@@ -105,11 +110,38 @@ public class PlayerController : MonoBehaviour
                 Vector2 jumpvel = new Vector2(0.0f, jumpSpeed);
                 //把设置好的参数赋予角色刚体,设置跳跃 ，Vector2.up是Vector2(0, 1)的简单写法
                 rigidbody2D.velocity = Vector2.up * jumpvel;
+                //一段跳后可以二段跳
+                canDoubleJump = true;
+            }
+            else
+            {
+                   //如果不在地面，就判断是否可以二段跳
+                if (canDoubleJump)
+                {
+                    //设置二段跳跃条件
+                    animator.SetBool("DoubleJump", true);
+                    //设置二段跳速度
+                    Vector2 doubleJumpVel = new Vector2(0.0f,doubleJumpSpeed);
+                    rigidbody2D.velocity = Vector2.up * doubleJumpVel;
+                    canDoubleJump = false;
+                }
             }
 
 
          }
     }
+
+    //攻击
+    /*  void Attack()
+       {
+           if (Input.GetButtonDown("Attack"))
+           {
+               Debug.Log("攻击");
+               //设置动画的trigger变量
+               animator.SetTrigger("Attack");
+           }
+      } */
+
     //检测是否接触地面
     void CheckGrounded()
     {
@@ -140,6 +172,28 @@ public class PlayerController : MonoBehaviour
             //设置下落转换站立的动画条件
             animator.SetBool("Fall",false);
             animator.SetBool("Idle",true);
+        }
+
+
+
+        //二段跳
+        //判断跳跃参数是否为true
+        if (animator.GetBool("DoubleJump"))
+        {
+            //根据y轴的速度判断 上升的话y轴速度是正数，如果下降那么y轴速度会变为负数 所以我们根据速度判断是否正在下落
+            if (rigidbody2D.velocity.y < 0.0f)
+            {
+                //给下落动画的条件赋值
+                animator.SetBool("DoubleJump", false);
+                animator.SetBool("DoubleFall", true);
+            }
+        }
+        //如果接触到地面
+        else if (isGround)
+        {
+            //设置下落转换站立的动画条件
+            animator.SetBool("DoubleFall", false);
+            animator.SetBool("Idle", true);
         }
     }
 }
