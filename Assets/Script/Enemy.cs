@@ -21,6 +21,9 @@ public abstract class Enemy : MonoBehaviour
     //闪烁时间
     public float flashTime;
 
+    //游戏对象
+    public GameObject bloodEffect;
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -46,6 +49,11 @@ public abstract class Enemy : MonoBehaviour
         health -= damage;
         //敌人受伤后闪烁
         FlashColor(flashTime);
+        //受伤后掉血粒子生成粒子系统
+        //参数一：是要生成的对象 参数二：实例化预设的坐标 参数三：实例化预设的旋转角度
+        Instantiate(bloodEffect,transform.position,Quaternion.identity);
+        //调用镜头抖动的代码
+        GameController.cameraShake.Shake();
     }
 
     //受伤后闪烁

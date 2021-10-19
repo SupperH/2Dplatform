@@ -148,7 +148,6 @@ public class PlayerController : MonoBehaviour
         //IsTouchingLayers：判断是否接触定义的图层，谁调用就拿谁去判断，因为这个类是角色类绑定在角色身上，所以是判断角色是否和对应图层接触
         //LayerMask.GetMask("Ground") 根据图层名获取对应图层 Ground就是我们给地面定义的图层，然后给地面选中图层后，如果角色接触到地面就会返回true
         isGround = myfeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        Debug.Log(isGround);
     }
 
     //切换动画
