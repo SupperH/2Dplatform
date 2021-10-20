@@ -24,9 +24,15 @@ public abstract class Enemy : MonoBehaviour
     //游戏对象
     public GameObject bloodEffect;
 
+    //玩家血量类
+    public PlayerHealth playerHealth;
+
     // Start is called before the first frame update
     public void Start()
     {
+        //通过tag标签，开始的时候就获取到对应对象的类
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+
         sprite = GetComponent<SpriteRenderer>();
         //把原始颜色先赋给变量
         originalColor = sprite.color;
@@ -71,5 +77,21 @@ public abstract class Enemy : MonoBehaviour
     void ResetColor()
     {
         sprite.color = originalColor;
+    }
+
+    //触发函数
+   void OnTriggerEnter2D(Collider2D collision)
+    {
+        //根据tag判断，如果接触到tag名为player,且接触到的碰撞体是胶囊体（CapsuleCollider2D是胶囊碰撞框，给玩家加的）就视为攻击敌人
+        if (collision.gameObject.CompareTag("Player") && collision.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
+        {
+            //调用玩家受伤函数传入伤害
+            if (playerHealth != null)
+            {
+                playerHealth.DamagePlayer(damage);
+
+            }
+
+        }
     }
 }
