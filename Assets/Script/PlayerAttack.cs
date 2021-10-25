@@ -39,8 +39,6 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetButtonDown("Attack"))
         {
-            Debug.Log("攻击");
-
 
             //设置动画的trigger变量
             animator.SetTrigger("Attack");
