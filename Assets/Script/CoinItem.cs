@@ -24,6 +24,8 @@ public class CoinItem : MonoBehaviour
         {
             //碰到了的话，金币数量加1 调用静态变量直接修改
             CoinUI.CurrentCoinQuantity += 1;
+            //播放捡金币声音
+            SoundManager.PlayPickCoinClip();
 
             //捡起来后，销毁当前金币对象，也可以加一个捡起动画，再消除对象
             Destroy(gameObject);

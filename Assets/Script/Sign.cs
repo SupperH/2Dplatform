@@ -25,7 +25,7 @@ public class Sign : MonoBehaviour
     void Update()
     {
         //如果按下了键盘的E键，而且接触到提示框
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerInSign)
+        if (/*Input.GetKeyDown(KeyCode.E) && */isPlayerInSign)
         {
             //给文本赋值
             dialogBoxText.text = siginText;
@@ -43,6 +43,7 @@ public class Sign : MonoBehaviour
         {
             //角色接触招牌
             isPlayerInSign = true;
+
         }
     }
 
