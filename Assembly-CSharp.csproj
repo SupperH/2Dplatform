@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Sign.cs" />
+    <Compile Include="Assets\Script\TrashBinCoin.cs" />
     <Compile Include="Assets\Script\CameraShake.cs" />
     <Compile Include="Assets\Script\PlayerHealth.cs" />
     <Compile Include="Assets\Script\CameraFollow.cs" />
@@ -65,23 +66,26 @@
     <Compile Include="Assets\Script\ScreenFlash.cs" />
     <Compile Include="Assets\Script\MeshRendererSortingEditor.cs" />
     <Compile Include="Assets\Script\BloodEffect.cs" />
+    <Compile Include="Assets\Script\TreasureBox.cs" />
     <Compile Include="Assets\Script\PlayerAttack.cs" />
+    <Compile Include="Assets\Script\TrashBinItem.cs" />
+    <Compile Include="Assets\Script\ExplodeRange.cs" />
     <Compile Include="Assets\Script\EnemyBat.cs" />
+    <Compile Include="Assets\Script\Sickle.cs" />
     <Compile Include="Assets\Script\CoinUI.cs" />
+    <Compile Include="Assets\Script\SickleHit.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
+    <Compile Include="Assets\Script\SoundManager.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
+    <Compile Include="Assets\Script\UIManager.cs" />
+    <Compile Include="Assets\Script\Bomb.cs" />
     <Compile Include="Assets\Script\GameController.cs" />
     <Compile Include="Assets\Script\MovingPlatform.cs" />
     <Compile Include="Assets\Script\Spike.cs" />
     <Compile Include="Assets\Script\CoinItem.cs" />
     <Compile Include="Assets\Script\ScreanChange.cs" />
-    <Compile Include="Assets\Script\TrashBinItem.cs" />
-    <Compile Include="Assets\Script\UIManager.cs" />
-    <Compile Include="Assets\Script\TrashBinCoin.cs" />
-    <Compile Include="Assets\Script\SoundManager.cs" />
-    <Compile Include="Assets\Script\Sickle.cs" />
-    <Compile Include="Assets\Script\SickleHit.cs" />
-    <Compile Include="Assets\Script\TreasureBox.cs" />
+    <Compile Include="Assets\Script\ThrowBomb.cs" />
+    <Compile Include="Assets\Script\DoorToNextLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
