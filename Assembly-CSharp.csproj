@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\EnemySmartBat.cs" />
     <Compile Include="Assets\Script\Sign.cs" />
     <Compile Include="Assets\Script\TrashBinCoin.cs" />
     <Compile Include="Assets\Script\CameraShake.cs" />
@@ -90,7 +91,11 @@
     <Compile Include="Assets\Script\InitButton.cs" />
     <Compile Include="Assets\Script\CoinItem.cs" />
     <Compile Include="Assets\Script\ScreanChange.cs" />
-    <Compile Include="Assets\Script\EnemySmartBat.cs" />
+    <Compile Include="Assets\Script\Arrow.cs" />
+    <Compile Include="Assets\Script\ArrowHit.cs" />
+    <Compile Include="Assets\Script\EasterEgg.cs" />
+    <Compile Include="Assets\Script\BatDestory.cs" />
+    <Compile Include="Assets\Script\TrapPlatform.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Lean\READ ME.txt" />
