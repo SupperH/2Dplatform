@@ -57,15 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\EnemySmartBat.cs" />
+    <Compile Include="Assets\Script\EasterEgg.cs" />
     <Compile Include="Assets\Script\Sign.cs" />
     <Compile Include="Assets\Script\TrashBinCoin.cs" />
     <Compile Include="Assets\Script\CameraShake.cs" />
+    <Compile Include="Assets\Script\ArrowHit.cs" />
     <Compile Include="Assets\Script\DoorToNextLevel.cs" />
     <Compile Include="Assets\Script\PlayerHealth.cs" />
     <Compile Include="Assets\Script\CameraFollow.cs" />
     <Compile Include="Assets\Script\FloatPoint.cs" />
     <Compile Include="Assets\Script\PlayerController.cs" />
     <Compile Include="Assets\Script\PauseMenu.cs" />
+    <Compile Include="Assets\Script\BatDestory.cs" />
     <Compile Include="Assets\Script\ScreenFlash.cs" />
     <Compile Include="Assets\Script\MeshRendererSortingEditor.cs" />
     <Compile Include="Assets\Script\BloodEffect.cs" />
@@ -76,6 +79,7 @@
     <Compile Include="Assets\Script\EnemyBat.cs" />
     <Compile Include="Assets\Script\Sickle.cs" />
     <Compile Include="Assets\Script\CoinUI.cs" />
+    <Compile Include="Assets\Script\TrapPlatform.cs" />
     <Compile Include="Assets\Script\SickleHit.cs" />
     <Compile Include="Assets\Script\HealthBar.cs" />
     <Compile Include="Assets\Script\SoundManager.cs" />
@@ -87,15 +91,15 @@
     <Compile Include="Assets\Script\MovingPlatform.cs" />
     <Compile Include="Assets\Script\Spike.cs" />
     <Compile Include="Assets\Script\ThrowBomb.cs" />
+    <Compile Include="Assets\Script\Arrow.cs" />
     <Compile Include="Assets\Script\MainMenu.cs" />
     <Compile Include="Assets\Script\InitButton.cs" />
     <Compile Include="Assets\Script\CoinItem.cs" />
     <Compile Include="Assets\Script\ScreanChange.cs" />
-    <Compile Include="Assets\Script\Arrow.cs" />
-    <Compile Include="Assets\Script\ArrowHit.cs" />
-    <Compile Include="Assets\Script\EasterEgg.cs" />
-    <Compile Include="Assets\Script\BatDestory.cs" />
-    <Compile Include="Assets\Script\TrapPlatform.cs" />
+    <Compile Include="Assets\Script\Gun.cs" />
+    <Compile Include="Assets\Script\Bullet.cs" />
+    <Compile Include="Assets\Script\Snake.cs" />
+    <Compile Include="Assets\Script\HideSpike.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Lean\READ ME.txt" />
