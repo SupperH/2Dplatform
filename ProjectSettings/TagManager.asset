@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - CameraShake
+  - Bullet
+  - YellowStar
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - Item
   - TriggerBox
   - Weapon
-  - 
+  - DestructibleLayer
   - 
   - 
   - 

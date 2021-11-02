@@ -77,5 +77,11 @@ public class PlayerAttack : MonoBehaviour
             //这里用抽象类，和java一样 有多个敌人然后直接指定敌人父类就可以了，不同敌人的数值直接在untiy中找到对应自己的脚本，然后设值即可，和Java子类调用父类方法传不同参数一样
             collision.GetComponent<Enemy>().TakeDamage(damage);
         }
+
+        //攻击小星星，随机生成礼盒，其实所有攻击对象的掉落物品都可以这么写
+        if (collision.gameObject.CompareTag("YellowStar"))
+        {
+            collision.GetComponent<YellowStar>().GenGift();
+        }
     }
 }

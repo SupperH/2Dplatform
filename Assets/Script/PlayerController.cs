@@ -236,8 +236,8 @@ public class PlayerController : MonoBehaviour
         //LayerMask.GetMask("Ground") 根据图层名获取对应图层 Ground就是我们给地面定义的图层，然后给地面选中图层后，如果角色接触到地面就会返回true
         isGround = myfeet.IsTouchingLayers(LayerMask.GetMask("Ground"))
             || myfeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"))
-            || myfeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
-
+            || myfeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"))
+            || myfeet.IsTouchingLayers(LayerMask.GetMask("DestructibleLayer"));
         isOneWayPlatform = myfeet.IsTouchingLayers(LayerMask.GetMask("OneWayPlatform"));
 
     }
